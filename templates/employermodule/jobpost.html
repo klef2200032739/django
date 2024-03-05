@@ -1,0 +1,63 @@
+{% extends 'Navbar/employernavbar.html' %}
+{% load static % }
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        window.confirm(" Employer navbar")
+    </script>
+</head>
+<body>
+{% block body %}
+<div>
+<h1>
+    This is Job Post page from Employer App
+</h1>
+<div>
+    <div class =" container mt-5">
+        <h3> Job Details Form</h3>
+        <form method="post" action ="">
+            {% csrf_token %}
+            <div class ="form group">
+                <label for = "workTitle"> Work Title</label>
+                <input type=" text " class = " form-control " name="workTitle" id ="workTitle" placeholder="Enter the Work Title">
+            </div>
+             <div class ="form group">
+                <label for = "workTitle"> Salary offered</label>
+                <input type=" text " class = " form-control " name="salaryOffered" id =" salaryOffered" placeholder="Enter the salary offered">
+                            </div>
+            <div class ="form group">
+                <label for = "jobType">JobType </label>
+                <select class ="form-control" name="jobType" id ="jobType" >
+                    <option value ="FullTime"> Full-Time</option>
+                    <option value ="partTime"> Part-Time</option>
+                    <option value ="contract"> Contract</option>
+                </select>
+
+
+            <div class ="form-group">
+                    <label for= "benefits"> Benefits </label>
+                    <textarea class ="form -control" name = " benefits" id = "benefits " rows="1" placeholder=" Enter the benefits" ></textarea>
+
+            </div>
+                 <div class ="form group">
+                <label for = "education"> Education</label>
+                <input type=" text " class = " form-control " name="education" id ="education" placeholder="Enter the education">
+            </div>
+            </div>
+                 <div class ="form group">
+                <label for = "requiredSkills"> RequiredSkills</label>
+                <input type=" text " class = " form-control " name="requiredSkills" id ="requiredSkills" placeholder="Enter the education">
+            </div>
+             <div class ="form group">
+                <label for = "worklocation"> Worklocation</label>
+                <input type=" text " class = " form-control " name="worklocation" id ="worklocation" placeholder="Enter the education">
+            </div>
+          <button type="Submit" class="btn btn-primary">Post the Job</button>
+        </form>
+</div>
+
+{% endblock %}
+ </body>
+</html>
